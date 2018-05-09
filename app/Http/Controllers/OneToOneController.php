@@ -31,8 +31,8 @@ class OneToOneController extends Controller
             ->get()
             ->first();
 
-        //$country = $localization->country;
         $country = $localization->country()->get()->first();
+        //$country = $localization->country;
         echo $country;
     }
 
@@ -57,6 +57,8 @@ class OneToOneController extends Controller
         $localization->country_id = $country->id;
         $saveLocation = $localization->save();*/
 
+
+        # Método 2
         $location = $country->localization()->create($dataForm);
         var_dump($location);
 
