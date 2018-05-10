@@ -18,6 +18,11 @@ $this->get('one-to-many-insert', 'OneToManyController@oneToManyInsert');
 $this->get('one-to-many-insert-two', 'OneToManyController@oneToManyInsertTwo');
 
 
+/**
+ *  Has Many Through
+ */
+$this->get('has-many-through', 'HasManyThrough@hasManyThrough');
+
 Route::get('/', function () {
     return view('welcome');
 });
